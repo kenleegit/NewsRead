@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{3736B2B0-3BEC-4B3C-8367-704FB58269AB}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="NewsRead Status">
+    <Files>
+      <File FileName="NewsRead Status" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.NewsRead.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.2F9FD5E4-753C-4DC6-AF41-B6AE9A6E87E9">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam />
+  </MonoDevelop.Ide.ItemProperties.NewsRead.iOS>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

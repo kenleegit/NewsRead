@@ -19,5 +19,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)NewsReadPage.xaml.cs">
       <DependentUpon>NewsReadPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Services\CloudDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MockDataStore.cs" />
   </ItemGroup>
 </Project>

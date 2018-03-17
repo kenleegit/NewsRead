@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace PrayerApp
+namespace NewsRead
 {
     public interface IDataStore<T>
     {

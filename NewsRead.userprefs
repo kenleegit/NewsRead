@@ -1,10 +1,14 @@
 ﻿<Properties StartupConfiguration="{3736B2B0-3BEC-4B3C-8367-704FB58269AB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="NewsRead/Services/MockDataStore.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="NewsRead/App.xaml.cs">
     <Files>
       <File FileName="NewsRead Status" />
-      <File FileName="NewsRead/Services/CloudDataStore.cs" Line="16" Column="23" />
+      <File FileName="NewsRead/Services/CloudDataStore.cs" Line="23" Column="49" />
       <File FileName="Droid/packages.config" Line="1" Column="1" />
-      <File FileName="NewsRead/Services/MockDataStore.cs" Line="8" Column="45" />
+      <File FileName="NewsRead/Services/MockDataStore.cs" Line="21" Column="42" />
+      <File FileName="NewsRead/Services/IDataStore.cs" Line="4" Column="19" />
+      <File FileName="NewsRead/Models/Item.cs" Line="7" Column="40" />
+      <File FileName="NewsRead/App.xaml" Line="7" Column="1" />
+      <File FileName="NewsRead/App.xaml.cs" Line="7" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.NewsRead.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.2F9FD5E4-753C-4DC6-AF41-B6AE9A6E87E9">

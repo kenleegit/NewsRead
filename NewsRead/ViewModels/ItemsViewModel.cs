@@ -38,8 +38,11 @@ namespace NewsRead
             try
             {
                 Items.Clear();
-                var items = await DataStore.GetItemsAsync("2", true);
-                foreach (var item in items)
+                //var items = await DataStore.GetItemsAsync(true);
+                //foreach (var item in items)
+                //Now call the new GetRssObject which returns an object instead of items.
+                var rssObject = await DataStore.GetRssObjectAsync(true);
+                foreach (var item in rssObject.items)
                 {
                     Items.Add(item);
                 }

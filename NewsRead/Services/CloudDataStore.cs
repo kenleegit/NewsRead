@@ -13,7 +13,8 @@ namespace NewsRead
     public class CloudDataStore : IDataStore<Item>
     {
         HttpClient client;
-        IEnumerable<Item> items;
+        IEnumerable<Item> items; //If feed contains an array of items
+        RssObject rssObject;
         string catname;
         //public string Catname;
 
@@ -25,6 +26,21 @@ namespace NewsRead
             items = new List<Item>();
             catname = "daily"; //todo parameterize the path to get entries
         }
+
+        public async Task<RssObject> GetRssObjectAsync(bool forceRefresh = false)
+        {
+            if (forceRefresh && CrossConnectivity.Current.IsConnected)
+            {
+                var json = await client.GetStringAsync(""); //"" means no additional URL suffix to add.
+                //items = await Task.Run(() => JsonConvert.DeserializeObject<IEnumerable<Item>>(json));
+                /*2018-03-18 Now the feed was RSS-converted to JSON. It has 1 single object instead of list of items.
+                 * Reference: https://github.com/eddydn/XamarinRSSFeed/blob/master/XamarinRSSFeed/MainActivity.cs
+                 */
+                rssObject = await Task.Run(() => JsonConvert.DeserializeObject<RssObject>(json));
+            }
+            return rssObject;
+        }
+
 
         public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
         {
@@ -69,7 +85,7 @@ namespace NewsRead
 
             return null;
         }
-
+        
         public async Task<bool> AddItemAsync(Item item)
         {
             if (item == null || !CrossConnectivity.Current.IsConnected)

@@ -7,6 +7,7 @@ namespace NewsRead
 {
     public class MockDataStore : IDataStore<Item>
     {
+        RssObject rssObject;
         List<Item> items;
 
         public MockDataStore()
@@ -57,6 +58,13 @@ namespace NewsRead
         public async Task<Item> GetItemAsync(string id)
         {
             return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
+        }
+
+        public Task<RssObject> GetRssObjectAsync(bool forceRefresh = false)
+        {
+            //Dummy implementation
+            //rssObject = await Task.Run(() => (RssObject)Console.Write("GetRssObjectAsync"));
+            return null;
         }
 
         public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)

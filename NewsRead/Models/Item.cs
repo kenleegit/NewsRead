@@ -4,6 +4,8 @@ namespace NewsRead
 {
     public class Feed
     {
+        public string Id { get; set; } //Id may not be present at Moodle feed. Just to compile
+        //public string status { get; set; }
         public string url { get; set; }
         public string title { get; set; }
         public string link { get; set; }
@@ -31,7 +33,7 @@ namespace NewsRead
         public List<object> categories { get; set; }
     }
 
-    public class RootObject
+    public class RssObject
     {
         public string status { get; set; }
         public Feed feed { get; set; }

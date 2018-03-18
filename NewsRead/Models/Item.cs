@@ -2,10 +2,9 @@
 
 namespace NewsRead
 {
+    /* Generated at http://json2csharp.com/ */
     public class Feed
     {
-        public string Id { get; set; } //Id may not be present at Moodle feed. Just to compile
-        //public string status { get; set; }
         public string url { get; set; }
         public string title { get; set; }
         public string link { get; set; }
@@ -20,7 +19,6 @@ namespace NewsRead
 
     public class Item
     {
-        public string Id { get; set; } //Id may not be present at Moodle feed. Just to compile
         public string title { get; set; }
         public string pubDate { get; set; }
         public string link { get; set; }

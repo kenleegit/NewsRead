@@ -85,7 +85,8 @@ namespace NewsRead
 
             return null;
         }
-        
+
+        /* Code not applicable in an RSS reader
         public async Task<bool> AddItemAsync(Item item)
         {
             if (item == null || !CrossConnectivity.Current.IsConnected)
@@ -122,5 +123,6 @@ namespace NewsRead
 
             return response.IsSuccessStatusCode;
         }
+        */
     }
 }

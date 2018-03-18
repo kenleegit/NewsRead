@@ -30,7 +30,7 @@ namespace NewsRead
         {
             if (forceRefresh && CrossConnectivity.Current.IsConnected)
             {
-                var json = await client.GetStringAsync($"wp-json/wp/v2/posts/?per_page=20&page=1&categories=" + catname);
+                var json = await client.GetStringAsync(""); //"" means no additional URL suffix to add.
                 items = await Task.Run(() => JsonConvert.DeserializeObject<IEnumerable<Item>>(json));
             }
 
@@ -41,7 +41,7 @@ namespace NewsRead
         {
             if (forceRefresh && CrossConnectivity.Current.IsConnected)
             {
-                var json = await client.GetStringAsync($"wp-json/wp/v2/posts/?per_page=20&page=1&categories=" + catname);
+                var json = await client.GetStringAsync($""); //"" means no additional URL suffix to add.
                 //2018-01-10 Remove HTML tags with Regexp. You see </p> is actually <\\/p>.
                 string pattern1 = @"<(\\/)*[a-z]+>";
                 json = Regex.Replace(json, pattern1, String.Empty);

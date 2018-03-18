@@ -1,19 +1,19 @@
 ﻿<Properties StartupConfiguration="{3736B2B0-3BEC-4B3C-8367-704FB58269AB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="NewsRead Status">
+  <MonoDevelop.Ide.Workbench ActiveDocument="NewsRead/Models/Item.cs">
     <Files>
       <File FileName="NewsRead/Services/CloudDataStore.cs" Line="40" Column="14" />
       <File FileName="Droid/packages.config" Line="1" Column="1" />
       <File FileName="NewsRead/Services/MockDataStore.cs" Line="10" Column="24" />
       <File FileName="NewsRead/Services/IDataStore.cs" Line="10" Column="47" />
-      <File FileName="NewsRead/Models/Item.cs" Line="10" Column="30" />
+      <File FileName="NewsRead/Models/Item.cs" Line="30" Column="34" />
       <File FileName="NewsRead/App.xaml" Line="7" Column="1" />
       <File FileName="NewsRead/App.xaml.cs" Line="10" Column="1" />
       <File FileName="NewsRead/ViewModels/BaseViewModel.cs" Line="9" Column="2" />
       <File FileName="NewsRead/ViewModels/ItemsViewModel.cs" Line="48" Column="18" />
       <File FileName="NewsRead/Views/ItemsView.xaml" Line="11" Column="59" />
       <File FileName="NewsRead/Views/ItemsView.xaml.cs" Line="14" Column="13" />
-      <File FileName="NewsRead/Views/ItemsPage.xaml" Line="9" Column="150" />
-      <File FileName="NewsRead/Views/ItemsPage.xaml.cs" Line="17" Column="10" />
+      <File FileName="NewsRead/Views/ItemsPage.xaml" Line="9" Column="88" />
+      <File FileName="NewsRead/Views/ItemsPage.xaml.cs" Line="13" Column="10" />
       <File FileName="NewsRead/NewsReadPage.xaml" Line="5" Column="1" />
       <File FileName="NewsRead/NewsReadPage.xaml.cs" Line="1" Column="1" />
       <File FileName="NewsRead/MainPage.cs" Line="31" Column="37" />
@@ -25,9 +25,7 @@
   </MonoDevelop.Ide.ItemProperties.NewsRead.iOS>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/ken/Projects/NewsRead/NewsRead/ViewModels/ItemsViewModel.cs" relfile="NewsRead/ViewModels/ItemsViewModel.cs" line="47" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />

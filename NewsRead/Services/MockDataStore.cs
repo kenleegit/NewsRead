@@ -15,20 +15,20 @@ namespace NewsRead
             items = new List<Item>();
             var mockItems = new List<Item>
             {
-                /*
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." },
-                */
+                new Item {title="Mock Item 1 Title", description="Mock Item 1 Description", content="Mock Item 1 Content"},
+                new Item {title="Mock Item 2 Title", description="Mock Item 2 Description", content="Mock Item 2 Content"},
             };
 
             foreach (var item in mockItems)
             {
                 items.Add(item);
             }
+            rssObject = new RssObject
+            {
+                status = "ok",
+                items = items,
+                feed = new Feed(){ title = "Mock Feed Title", url = "http://127.0.0.1/"} 
+            };
         }
 
         public async Task<bool> AddItemAsync(Item item)
@@ -38,11 +38,10 @@ namespace NewsRead
             return await Task.FromResult(true);
         }
 
-        public Task<RssObject> GetRssObjectAsync(bool forceRefresh = false)
+        public async Task<RssObject> GetRssObjectAsync(bool forceRefresh = false)
         {
             //Dummy implementation
-            //rssObject = await Task.Run(() => (RssObject)Console.Write("GetRssObjectAsync"));
-            return null;
+            return await Task.FromResult(rssObject);;
         }
 
         public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)

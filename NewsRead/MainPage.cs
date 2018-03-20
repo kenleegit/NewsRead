@@ -1,4 +1,5 @@
 ﻿using System;
+//using System.Collections.Generic;
 
 using Xamarin.Forms;
 
@@ -8,32 +9,50 @@ namespace NewsRead
     {
         public MainPage()
         {
-            Page itemsPage = null;
+            //List<Page> itemsPage = null; //(Please try adding to Children directly
+            string[] pageTitle = { "院长双周记", "良友电台" };
+            string[] iconFile = { "tab_feed.png", "tab_feed.png" };
+            int numPages = pageTitle.Length;
 
+            //Create Pages object with their parameters
             switch (Device.RuntimePlatform)
             {
                 case Device.iOS:
-                    itemsPage = new NavigationPage(new ItemsPage(0))
+                    for (int i = 0; i < numPages; i++){
                         //arguement points to BaseViewModel.NewsSource
-                    {
-                        Title = "每日代禱",
-                        Icon = "tab_feed.png"
-                    };
-
+                        Children.Add(new NavigationPage(new ItemsPage(i))
+                        {
+                            Title = pageTitle[i],
+                            Icon = iconFile[i]
+                        });
+                    }
                     break;
+
                 default:
-                    itemsPage = new ItemsPage(0)
+                    for (int i = 0; i < numPages; i++)
                     {
-                        Title = "每日代禱"
-                    };
+                        Children.Add(new ItemsPage(i)
+                        {
+                            Title = pageTitle[i]
+                        });
+                    }
+                    //for (int i = 0; i < numPages; i++)
+                    //{
+                    //    itemsPage[i] = new ItemsPage(i) { Title = pageTitle[i] };
+                    //}
                     break;
             }
 
-            Children.Add(itemsPage);
+            //Add Pages to children of tabbed page
+            //for (int i = 0; i < numPages; i++)
+            //{
+            //    Children.Add(itemsPage[i]);
+            //}
 
             Title = Children[0].Title;
         }
 
+        //Change title when page is changed
         protected override void OnCurrentPageChanged()
         {
             base.OnCurrentPageChanged();

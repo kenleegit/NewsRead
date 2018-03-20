@@ -43,7 +43,7 @@ namespace NewsRead
                 //foreach (var item in items)
                 //Now call the new GetRssObject which returns an object instead of item s.
                 //var rssObject = await DataStore.GetRssObjectAsync(true, NewsURL[(int)newsSource]);
-                var rssObject = await DataStore.GetRssObjectAsync(true, NewsURL[1]);
+                var rssObject = await DataStore.GetRssObjectAsync(true, NewsURL[(int)newsSource]);
                 foreach (var item in rssObject.items)
                 {
                     Items.Add(item);

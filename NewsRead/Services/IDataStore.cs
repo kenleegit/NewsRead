@@ -5,7 +5,8 @@ namespace NewsRead
 {
     public interface IDataStore<T>
     {
-        Task<T> GetRssObjectAsync(bool forceRefresh = false);
+        Task<T> GetRssObjectAsync(bool forceRefresh = false, 
+                                  string OptionalURL = "https://www.news.gov.hk/tc/common/html/ticker.rss.xml");
         /* Use RssObject instead of Items
         Task<IEnumerable<T>> GetItemsAsync(bool forceRefresh = false);
         Task<IEnumerable<T>> GetItemsAsync(string catname, bool forceRefresh = false);

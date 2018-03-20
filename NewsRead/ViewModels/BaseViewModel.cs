@@ -9,7 +9,10 @@ namespace NewsRead
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public enum NewsSourceEnum { RSSMoodleDean, Txly2 };
+        public enum NewsSourceEnum { RSSMoodleDean, Txly2};
+        public string[] NewsURL = {"https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Fnew.ltshk.net%2Frss%2Ffile.php%2F3619%2Fa91badc54389491a65e8c070e6cd78e6%2Fmod_forum%2F78%2Frss.xml",
+            "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Ftxly2.net%2Findex.php%3Foption%3Dcom_sermonspeaker%26view%3Dfeed%26format%3Draw%26type%3Daudio%26Itemid%3D233"
+        };
 
         public IDataStore<RssObject> DataStore => DependencyService.Get<IDataStore<RssObject>>() ?? new MockDataStore();
 

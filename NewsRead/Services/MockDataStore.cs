@@ -32,7 +32,7 @@ namespace NewsRead
             };
         }
 
-        public async Task<RssObject> GetRssObjectAsync(bool forceRefresh = false)
+        public async Task<RssObject> GetRssObjectAsync(bool forceRefresh = false, string OptionalURL = "https://127.0.0.1/")
         {
             //Dummy implementation
             return await Task.FromResult(rssObject);;

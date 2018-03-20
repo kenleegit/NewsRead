@@ -26,10 +26,11 @@ namespace NewsRead
             //catname = "daily"; //todo parameterize the path to get entries
         }
 
-        public async Task<RssObject> GetRssObjectAsync(bool forceRefresh = false)
+        public async Task<RssObject> GetRssObjectAsync(bool forceRefresh = false, string OptionalURL = "https://www.news.gov.hk/tc/common/html/ticker.rss.xml")
         {
             if (forceRefresh && CrossConnectivity.Current.IsConnected)
             {
+                client.BaseAddress = new Uri($"{OptionalURL}/");
                 var json = await client.GetStringAsync(""); //"" means no additional URL suffix to add.
                 //items = await Task.Run(() => JsonConvert.DeserializeObject<IEnumerable<Item>>(json));
                 /*2018-03-18 Now the feed was RSS-converted to JSON. It has 1 single object instead of list of items.

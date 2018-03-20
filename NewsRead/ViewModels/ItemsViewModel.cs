@@ -15,7 +15,7 @@ namespace NewsRead
 
         public ItemsViewModel()
         {
-            //Title = "每日代禱";  No need to set here cause it is set at MainPage.cs
+            //Title = "Something";  No need to set here cause it is set at MainPage.cs
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
@@ -41,8 +41,9 @@ namespace NewsRead
                 Items.Clear();
                 //var items = await DataStore.GetItemsAsync(true);
                 //foreach (var item in items)
-                //Now call the new GetRssObject which returns an object instead of items.
-                var rssObject = await DataStore.GetRssObjectAsync(true);
+                //Now call the new GetRssObject which returns an object instead of item s.
+                //var rssObject = await DataStore.GetRssObjectAsync(true, NewsURL[(int)newsSource]);
+                var rssObject = await DataStore.GetRssObjectAsync(true, NewsURL[1]);
                 foreach (var item in rssObject.items)
                 {
                     Items.Add(item);

@@ -10,12 +10,11 @@ using Plugin.Connectivity;
 
 namespace NewsRead
 {
-    public class CloudDataStore : IDataStore<Item>
+    public class CloudDataStore : IDataStore<RssObject>
     {
         HttpClient client;
-        IEnumerable<Item> items; //If feed contains an array of items
+        //IEnumerable<Item> items; //If feed contains an array of items
         RssObject rssObject;
-        string catname;
         //public string Catname;
 
         public CloudDataStore()
@@ -23,8 +22,8 @@ namespace NewsRead
             client = new HttpClient();
             client.BaseAddress = new Uri($"{App.BackendUrl}/");
 
-            items = new List<Item>();
-            catname = "daily"; //todo parameterize the path to get entries
+            //items = new List<Item>();
+            //catname = "daily"; //todo parameterize the path to get entries
         }
 
         public async Task<RssObject> GetRssObjectAsync(bool forceRefresh = false)
@@ -41,7 +40,7 @@ namespace NewsRead
             return rssObject;
         }
 
-
+        /* Use RssObject instead of Items
         public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
         {
             if (forceRefresh && CrossConnectivity.Current.IsConnected)
@@ -85,6 +84,7 @@ namespace NewsRead
 
             return null;
         }
+        */
 
         /* Code not applicable in an RSS reader
         public async Task<bool> AddItemAsync(Item item)

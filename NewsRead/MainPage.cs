@@ -13,15 +13,16 @@ namespace NewsRead
             switch (Device.RuntimePlatform)
             {
                 case Device.iOS:
-                    itemsPage = new NavigationPage(new ItemsPage())
+                    itemsPage = new NavigationPage(new ItemsPage(0))
+                        //arguement points to BaseViewModel.NewsSource
                     {
-                        Title = "每日代禱"
+                        Title = "每日代禱",
+                        Icon = "tab_feed.png"
                     };
-                    itemsPage.Icon = "tab_feed.png";
 
                     break;
                 default:
-                    itemsPage = new ItemsPage()
+                    itemsPage = new ItemsPage(0)
                     {
                         Title = "每日代禱"
                     };

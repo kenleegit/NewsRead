@@ -5,14 +5,15 @@ using System.Threading.Tasks;
 
 namespace NewsRead
 {
-    public class MockDataStore : IDataStore<Item>
+    public class MockDataStore : IDataStore<RssObject>
     {
-        RssObject rssObject;
-        List<Item> items;
+        RssObject rssObject; /* Use RssObject instead of Items */
+        //List<Item> items;
 
         public MockDataStore()
         {
-            items = new List<Item>();
+            /* Use RssObject instead of Items */
+            List<Item>items = new List<Item>();
             var mockItems = new List<Item>
             {
                 new Item {title="Mock Item 1 Title", description="Mock Item 1 Description", content="Mock Item 1 Content"},
@@ -31,19 +32,13 @@ namespace NewsRead
             };
         }
 
-        public async Task<bool> AddItemAsync(Item item)
-        {
-            items.Add(item);
-
-            return await Task.FromResult(true);
-        }
-
         public async Task<RssObject> GetRssObjectAsync(bool forceRefresh = false)
         {
             //Dummy implementation
             return await Task.FromResult(rssObject);;
         }
 
+        /* Use RssObject instead of Items
         public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
         {
             return await Task.FromResult(items);
@@ -53,8 +48,15 @@ namespace NewsRead
         {
             return await Task.FromResult(items);
         }
-
+        */
         /* Code not applicable in an RSS reader
+        public async Task<bool> AddItemAsync(Item item)
+        {
+            items.Add(item);
+
+            return await Task.FromResult(true);
+        }
+
         public async Task<Item> GetItemAsync(string id)
         {
             return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));

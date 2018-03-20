@@ -9,11 +9,13 @@ namespace NewsRead
     {
         ItemsViewModel viewModel;
 
-        public ItemsPage()
+        public ItemsPage(int thisPageType)
         {
             InitializeComponent();
 
-            BindingContext = viewModel = new ItemsViewModel();
+            BindingContext = viewModel = new ItemsViewModel(){
+                //Specify the page source at ItemsViewModel
+                newsSource = (BaseViewModel.NewsSourceEnum)thisPageType };
         }
 
         ////async Not implemented yet

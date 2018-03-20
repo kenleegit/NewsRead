@@ -9,7 +9,9 @@ namespace NewsRead
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>() ?? new MockDataStore();
+        public enum NewsSourceEnum { RSSMoodleDean, Txly2 };
+
+        public IDataStore<RssObject> DataStore => DependencyService.Get<IDataStore<RssObject>>() ?? new MockDataStore();
 
         bool isBusy = false;
         public bool IsBusy

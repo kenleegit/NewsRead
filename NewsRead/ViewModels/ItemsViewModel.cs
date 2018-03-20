@@ -11,10 +11,11 @@ namespace NewsRead
     {
         public ObservableCollection<Item> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
+        public NewsSourceEnum newsSource;  //defined at BaseViewModel
 
         public ItemsViewModel()
         {
-            Title = "每日代禱";
+            //Title = "每日代禱";  No need to set here cause it is set at MainPage.cs
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 

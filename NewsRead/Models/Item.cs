@@ -13,8 +13,19 @@ namespace NewsRead
         public string image { get; set; }
     }
 
+    public class Rating
+    {
+        public string scheme { get; set; } //Txly2
+        public string value { get; set; } //Txly2
+    }
+
     public class Enclosure
     {
+        public string link { get; set; } //Txly2
+        public string type { get; set; } //Txly2
+        public int length { get; set; } //Txly2
+        public int duration { get; set; } //Txly2
+        public Rating rating { get; set; } //Txly2
     }
 
     public class Item

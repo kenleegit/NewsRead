@@ -10,8 +10,8 @@ namespace NewsRead
         public MainPage()
         {
             //List<Page> itemsPage = null; //(Please try adding to Children directly
-            string[] pageTitle = { "院长双周记", "良友电台" };
-            string[] iconFile = { "tab_feed.png", "tab_feed.png" };
+            string[] pageTitle = { "院长双周记", "学院消息", "良友电台" };
+            string[] iconFile = { "tab_feed.png", "tab_feed.png", "tab_feed.png" };
             int numPages = pageTitle.Length;
 
             //Create Pages object with their parameters

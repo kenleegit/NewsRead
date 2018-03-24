@@ -1,18 +1,23 @@
 ﻿<Properties StartupConfiguration="{3736B2B0-3BEC-4B3C-8367-704FB58269AB}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="NewsRead Status">
     <Files>
-      <File FileName="NewsRead/NewsReadPage.xaml.cs" Line="10" Column="34" />
-      <File FileName="NewsRead/NewsReadPage.xaml" Line="6" Column="1" />
+      <File FileName="NewsRead/NewsReadPage.xaml.cs" Line="3" Column="19" />
+      <File FileName="NewsRead/NewsReadPage.xaml" Line="5" Column="1" />
       <File FileName="NewsRead/MainPage.cs" Line="47" Column="22" />
-      <File FileName="NewsRead/Views/ItemsVPage.xaml" Line="9" Column="55" />
-      <File FileName="NewsRead/Views/ItemsVPage.xaml.cs" Line="25" Column="9" />
+      <File FileName="NewsRead/Views/ItemsVPage.xaml" Line="21" Column="1" />
+      <File FileName="NewsRead/Views/ItemsVPage.xaml.cs" Line="35" Column="54" />
       <File FileName="iOS/obj/iPhoneSimulator/Debug/NewsRead.iOS.Views.ItemsVPage.xaml.g.cs" Line="25" Column="1" />
-      <File FileName="NewsRead/ViewModels/BaseViewModel.cs" Line="1" Column="1" />
+      <File FileName="NewsRead/ViewModels/BaseViewModel.cs" Line="12" Column="30" />
       <File FileName="NewsRead/Models/Item.cs" Line="1" Column="1" />
-      <File FileName="NewsRead/Views/ModalPage.xaml" Line="2" Column="132" />
+      <File FileName="NewsRead/Views/ModalPage.xaml" Line="13" Column="1" />
       <File FileName="NewsRead/Views/ModalPage.xaml.cs" Line="49" Column="2" />
       <File FileName="iOS/Main.cs" Line="17" Column="1" />
-      <File FileName="NewsRead/App.xaml.cs" Line="1" Column="1" />
+      <File FileName="NewsRead/App.xaml.cs" Line="9" Column="11" />
+      <File FileName="NewsRead/ViewModels/ItemsViewModel.cs" Line="14" Column="31" />
+      <File FileName="NewsRead/Services/IDataStore.cs" Line="1" Column="1" />
+      <File FileName="NewsRead/Services/CloudDataStore.cs" Line="22" Column="39" />
+      <File FileName="NewsRead/App.xaml" Line="9" Column="1" />
+      <File FileName="NewsRead/Services/MockDataStore.cs" Line="1" Column="1" />
       <File FileName="NewsRead Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>

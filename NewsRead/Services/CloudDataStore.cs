@@ -20,7 +20,7 @@ namespace NewsRead
         public CloudDataStore()
         {
             client = new HttpClient();
-            client.BaseAddress = new Uri($"{App.BackendUrl}/");
+            //client.BaseAddress = new Uri($"{App.BackendUrl}/");
 
             //items = new List<Item>();
             //catname = "daily"; //todo parameterize the path to get entries

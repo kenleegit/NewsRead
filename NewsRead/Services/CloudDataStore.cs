@@ -36,9 +36,19 @@ namespace NewsRead
                 /*2018-03-18 Now the feed was RSS-converted to JSON. It has 1 single object instead of list of items.
                  * Reference: https://github.com/eddydn/XamarinRSSFeed/blob/master/XamarinRSSFeed/MainActivity.cs
                  */
-                rssObject = await Task.Run(() => JsonConvert.DeserializeObject<RssObject>(json));
+                rssObject = await Task.Run(() => JsonConvert.DeserializeObject<RssObject>(DeTags(json)));
             }
             return rssObject;
+        }
+
+        private string DeTags(string stringparam) {
+            string pattern = @"<(\\/)*[a-z]+>";
+            stringparam = Regex.Replace(stringparam, pattern, String.Empty);
+            pattern = @"&#8211;";
+            stringparam = Regex.Replace(stringparam, pattern, "-");
+            pattern = "&nbsp;";
+            stringparam = Regex.Replace(stringparam, pattern, " ");
+            return stringparam;
         }
 
         /* Use RssObject instead of Items

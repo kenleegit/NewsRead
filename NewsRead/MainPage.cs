@@ -20,7 +20,7 @@ namespace NewsRead
                 case Device.iOS:
                     for (int i = 0; i < numPages; i++){
                         //arguement points to BaseViewModel.NewsSource
-                        Children.Add(new NavigationPage(new ItemsPage(i))
+                        Children.Add(new NavigationPage(new ItemsVPage(i))
                         {
                             Title = pageTitle[i],
                             Icon = iconFile[i]
@@ -31,7 +31,7 @@ namespace NewsRead
                 default:
                     for (int i = 0; i < numPages; i++)
                     {
-                        Children.Add(new ItemsPage(i)
+                        Children.Add(new ItemsVPage(i)
                         {
                             Title = pageTitle[i]
                         });
